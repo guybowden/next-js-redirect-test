@@ -3,6 +3,7 @@ export default function Page() {
 }
 
 export function getStaticProps({ params }) {
+  console.log("Redirector: ", params.slug);
   return {
     redirect: {
       destination: "/",
