@@ -5,6 +5,7 @@ export default function Page() {
 export function getStaticProps({ params }) {
   console.log("Redirector: ", params.slug);
   return {
+    revalidate: 10,
     redirect: {
       destination: "/",
       permanent: params.slug == "permanent",
